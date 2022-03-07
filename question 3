@@ -1,0 +1,21 @@
+##שאלת בונוס ראשונה
+#set זאת רשימה שאינה מאפשרת להכניס את אותו הערך פעמיים ומסודרת מהנמוך לגבוה ולא לפי סדר ההכנסה
+#tuple זאת רשימה שמאפשרת הכנסה של אותו הערך יותר מפעם אחת אך היא מסודרת מהנמוך לגבוה ולא לפי סדר ההכנסה
+#list זאת רשימה שמאפשרת הכנסה של אותו ערך יותר מפעם אחתומסודרת לפי סדר ההכנסה, מה שנכנס ראשון נמצא במקום הראשון ומה שנמצא במקום האחרון נכנס אחרון.
+
+##שאלת בונוס שנייה
+while True:
+    try:
+        n = int(input('please enter the longest line number(Ezugi)'))
+        if n%2 == 0 or n<0:
+            print('the input was incorrect')
+            continue
+        for i in range(1, n, 2):
+            l = (n + 2 - i) // 2
+            print(' ' * l + '*' * i + ' ' * l)
+        for i in range(n,0,-2):
+            l = (n + 2 - i) // 2
+            print(' ' * l + '*' * i + ' ' * l)
+        break
+    except:
+        print('something went wrong')
