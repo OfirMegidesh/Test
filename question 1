@@ -1,0 +1,30 @@
+class Shape:
+    def __init__(self, area, hekef):
+        self.__area = None
+        self.__hekef = None
+        self.area = area
+        self.hekef = hekef
+
+    def __str__(self):
+        return f'shape:area= {self.area} hekef= {self.hekef}'
+
+    def __repr__(self):
+        return f'Shape({self.area}, {self.hekef})'
+
+    @property
+    def area(self):
+        return self.__area
+
+    @area.setter
+    def area(self, n):
+        if n > 0:
+            self.__area = n
+
+    @property
+    def hekef(self):
+        return self.__hekef
+
+    @hekef.setter
+    def hekef(self, h):
+        if h > 0:
+            self.__hekef = h
